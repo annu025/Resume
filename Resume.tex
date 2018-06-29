@@ -1,0 +1,266 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[document]{ragged2e}
+\usepackage{color}
+
+% DEFINITIONS FOR RESUME
+
+\textheight=10in
+\pagestyle{fancy}
+\raggedright
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\setlength{\hoffset}{-2pt}
+\setlength{\footskip}{20pt}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newcommand{\contact}[3]{
+\vspace*{5pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+\vspace{3pt}
+#2 
+\vspace{2pt}
+#3
+\end{center}
+\vspace*{-8pt}
+}
+
+\newcommand{\header}[1]{{
+\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} 
+\lineunder
+}
+
+\newcommand{\lineunder}{
+\vspace*{-8pt} \\ \hspace*{-18pt} 
+\hrulefill \\
+}
+
+\newcommand{\content}{
+\vspace*{2pt}%
+}
+
+\newcommand{\college}[5]{\vspace*{2pt}% 
+\textbf{#1} \labelitemi #2 \labelitemi #3 \hfill #4 \\ #5 
+\vspace*{5pt}
+}
+
+\newcommand{\school}[4]{
+\textbf{#1} \labelitemi #2 \hfill #3 \\ #4 \vspace*{5pt}
+}
+
+\newcommand{\employer}[4]{{
+\vspace*{2pt}%
+\textbf{#1} #2 \hfill #3\\ #4 \vspace*{2pt}}
+}
+
+\newcommand{\project}[4]{{
+\vspace*{2pt}% 
+\textbf{#1} #2 \hfill #3\\ \textit{#4} \vspace*{2pt}}
+}
+
+\renewcommand{\labelitemi}{
+$\vcenter{\hbox{\tiny$\bullet$}}$\hspace*{3pt}
+}
+
+\renewcommand{\labelitemii}{
+$\vcenter{\hbox{\tiny$\bullet$}}$\hspace*{-3pt}
+}
+
+\newenvironment{bullet-list-major}{
+\begin{list}{\labelitemii}{\setlength\leftmargin{3pt} 
+\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}
+}
+
+\newenvironment{bullet-list-minor}{
+\begin{list}{\labelitemii}{\setlength\leftmargin{15pt} 
+\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}
+}
+
+\cfoot{
+Last updated: December 16, 2015
+}
+
+\rfoot{
+Page $\thepage\hspace*{3pt}\vert\hspace*{3pt}\pageref{LastPage}$
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Anundhara Chimmad}
+{36403 SE Woody Creek Ln, Snoqualmie WA 98065\\}
+{+1-469-648-8744 \labelitemi anundhara@gmail.com}
+\vspace{15pt}
+\header{Objective}
+ \content{ Anundhara is a Software Development Engineer and an aspiring Data Scientist. She has two years of experience in software design and development. Also, a year and a half worth industry experience in Data Science and Machine Learning. Strong interpersonal skills, readiness to learn are her proficiencies. She succeeds at analyzing requirements and delivers with minimum supervision. Currently, she is seeking an admission to doctoral studies become a academic researcher and a valuable professor.
+\vspace*{4pt}%
+
+\header{Professional Experience}
+    \employer{Software Development Engineer}{}{Sep 2017 -- to present}{Integra Technologies, Bellevue, WA}
+	\begin{bullet-list-minor}
+	\item Develop and test features for RKernel and Teammates open source projects using Java
+	\item Threat identification for proposed solution and prepare test case scenarios 
+	\item Document effort estimation plan for new features, feature enhancements and develop test plans  
+	\item Utilize test driven development approach to deliver commercial quality code. 
+	
+	\textit{Tools: IntelliJ, MySQL, Anaconda framework, MS Onenote}
+    \end{bullet-list-minor}
+
+    \employer{Software Engineer}{}{July 2016 -- Sep 2017}{Edifecs, Bellevue, WA}
+	\begin{bullet-list-minor}
+	\item Primary developer to gather and analyze business requirements from client meetings	
+	\item Document fitgap analysis report with proposed architecture and design
+	\item Develop custom solution with routes and maps using Smart Trading components
+	\item Implement messaging service queue using Apache ActiveMQ and Java 
+	\item Automate installation process of product solution using Groovy
+	
+	\textit{Tools: Apache ActiveMQ, MySQL, XEngine, XEngineServer, Transaction Management, Windows SQL Server}
+  \end{bullet-list-minor}
+	
+  \employer{Software Engineer Intern}{}{Feb 2016 -- July 2016}{Edifecs, Bellevue, WA}
+	\begin{bullet-list-minor}
+	\item Develop analytics models using feature engineering and visual analytics for high cost risk patient identification, risk adjustment and medical claims rejection use cases by applying machine learning algorithms. 
+	\item Perform feasibility analysis of reporting solutions like Tableau, Jaspersoft and XBoard fork 
+	\item Customize XBoard fork to build interactive and dynamic reports for the implemented model
+	
+	\textit{Tools: RStudio, MySQL, DevExpress, AngularJS, XEngine, XEngineServer, Transaction Management, Windows SQL Server}
+
+    \end{bullet-list-minor}
+    
+    \employer{Web Developer}{}{Apr 2015 -- Sep 2015}{F5 Networks, Seattle, WA}
+	\begin{bullet-list-minor}
+	\item Redesign transition and flow of existing customer support portal
+	\item Develop a new custom, single-page, cross browser, responsive web application 
+	\item Implement methods to reuse cached HTTP responses for future offline access and requests.
+	
+	\textit{Tools: IntelliJ, REST, Bootstrap CSS, AngularJS, Karma, SoapUI}
+	\end{bullet-list-minor}
+\vspace*{4pt}%
+
+
+
+\header{Research}
+    \project{IEEE Publication}{Assessment of Healthcare Claims Rejection Risk using Machine Learning}{Sep 2016 -- Dec 2016 }{Software Engineer, Edifecs, Bellevue WA}
+	\begin{bullet-list-minor}
+	\item Investigate factors causing increased medical claim rejection
+	\item Design and implement a model using classification tree, support vector machines and logistic regression algorithms
+	\item Using the model, categorize the claims as accepted or prone to rejection per number of rejection ICD codes
+	\item Infer factors such as ICD codes, plan cost and member age influence medical claims denial rate
+   	\item Propose additional attributes to the dataset to reduce the rejection rate
+	\item Reduce medical coder’s manual interruption in the state-of-the-art medical claims lifecycle. 
+	
+	\textit{Tools: RStudio, Git, Tableau}
+	
+	\textit{Citation: Saripalli, P., Tirumala, V. and Chimmad, A., 2017, October. Assessment of healthcare claims rejection risk using machine learning. In e-Health Networking, Applications and Services (Healthcom), 2017 IEEE 19th International Conference on (pp. 1-6). IEEE.}
+    \end{bullet-list-minor}
+
+   \newpage
+    \project{}{Risk Adjustment Analysis using Machine Learning,}{Feb 2016 – Oct 2016}{ Software Engineer Intern, Edifecs, Bellevue WA}
+	\begin{bullet-list-minor}
+	\item Analyze drawbacks of the state of the art risk adjustment model 
+	\item Design a new learning model using demographic and diagnostic information
+	\item Determine risk score involving plan enrollees and plan value
+	\item Demonstrate accuracy of expected plan liability for enrollee medical expenditures
+	\item Implement classification tree, support vector machines algorithms on anonymized dataset
+	\item Results drawn from models over three stages of improved dataset provided reduced risk scores	
+	
+	\textit{Tools: RStudio, Git, Tableau}
+    \end{bullet-list-minor}
+    
+    % \newpage
+    \project{}{Analysis of High Cost Risk Patient using Machine Learning}{Oct 2016 – Dec 2016}{ Software Engineer Intern, Edifecs, Bellevue WA}
+	\begin{bullet-list-minor}
+	\item Analyze dataset obtained by Center of Medicare and Medicaid Services
+	\item Scrub the dataset to eliminate anomalies and incomplete records
+	\item Determine factors for increased cost for members of a healthcare insurance plan
+	\item Results derived showed improved accuracy in identifying enrollees with high cost	
+	
+	\textit{Tools: RStudio, Git, Tableau}
+    \end{bullet-list-minor}
+
+\vspace*{4pt}%
+
+\header{Education}
+    \school{San Diego State University}{San Diego, CA}{Aug 2013 -- Dec 2016}
+    {\textit{Master of Science \labelitemi Computer Science}\labelitemi GPA: 3.4/4}
+
+    \school{Visvesvaraya Technological University}{Belgaum, India}{Aug 2009 -- May 2013}
+    {\textit{Bachelor of Engineering \labelitemi Computer Science}\labelitemi GPA: 3.8/4}
+
+
+   \vspace*{4pt}%
+   
+% \newpage
+%\vspace*{-20pt}
+\header{Thesis}
+    \project{Database Management System for Uncertain and Probabilistic Data}{ }{Aug 2015 -- Jan 2016}{San Diego State University, San Diego CA}
+	\begin{bullet-list-minor}
+    \item Propose a probabilistic database management system as an extension to relational database systems
+    \item Analyze query and update language for probabilistic data and approximate query processing system
+	
+	\textit{MayBMS framework, PostgreSQL, MySQL, RStudio}
+	\end{bullet-list-minor}
+	
+	\project{Technical e-mail Notification System}{}{Jan 2013 -- May 2013}{Visvesvaraya Technological University, Belgaum, India}
+	\begin{bullet-list-minor}
+	\item Extract event information like technical conferences, workshops, seminars using web crawlers
+	\item Design a user interface to link crawled data to the website
+	
+	\textit{HTML, CSS, Apache Tomcat, MySQL, Windows SQL Server}
+	
+	\end{bullet-list-minor}
+
+    	
+\vspace*{4pt}%
+\header{Technical Skills}
+    \begin{bullet-list-major}    
+    \item Programming languages: Java, R, JavaScript, Python, C-Sharp, Groovy
+    \vspace{2pt}
+    \item IDE: IntelliJ, RStudio, PyCharm, Eclipse
+    \vspace{2pt}
+    \item Platforms \& frameworks: Anaconda, AngularJS, Spring, Tensorflow
+    \vspace{2pt}
+     \item Front-end technologies: HTML, CSS, RESTful APIs, JSON, XML
+    \vspace{2pt}
+    \item Databases: MySQL, PostgreSQL
+    \vspace{2pt}
+    \item Operating systems: Windows, OS X, Linux
+    \vspace{2pt}
+    \item Source control: Git, BitBucket, SVN
+    \item Software experience: Adobe Dreamweaver, MS Office Suite
+    \vspace{2pt}
+     \item Learning: Tensorflow, Spring, Design patterns, Dependency Injection, Automated testing
+    \vspace{2pt}
+        \end{bullet-list-major}
+
+\vspace*{4pt}%
+\header{Extra Curricular Activities}
+    \begin{bullet-list-major}
+    \item Volunteer at Seattle Humane Society
+    \vspace{2pt}
+    \item Event organizer and volunteer at She Coding and SDE Skills
+    \vspace{2pt}
+    \item Member of Pacific North West hiker club 
+    \vspace{2pt}
+    \item Open source contributor on GitHub and Kaggle
+    \end{bullet-list-major}
+
+\vspace*{4pt}%
+\header{Personal Attributes}
+    \content{Attentive listener, avid reader, quick learner, knowledge enthusiast, and creative.\vspace{5pt}}
+
+\end{document}
